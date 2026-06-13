@@ -7,6 +7,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&family=Comfortaa:wght@500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
     <link rel="stylesheet" href="tooplate-mochi-space.css">
 <!--
 
@@ -28,7 +29,7 @@ Free HTML CSS Template
     </div>
 
     <!-- Navigation -->
-    <nav id="navbar">
+    <nav id="navbar" class="nav main">
         <div class="nav-container">
             <a href="#" class="logo">
                 <div class="logo-blob"></div>
@@ -40,7 +41,10 @@ Free HTML CSS Template
                 <li><a href="#preview">Preview</a></li>
                 <li><a href="#testimonials">Reviews</a></li>
             </ul>
-            <a href="#download" class="nav-cta">Download Free</a>
+            <div class="nav-buttons">
+                <button class="nav-cta" id="form-open">Login</button>
+                <a href="#download" class="nav-download">Download Free</a>
+            </div>
             <div class="mobile-menu-btn" id="mobileMenuBtn">
                 <span></span>
                 <span></span>
@@ -60,7 +64,68 @@ Free HTML CSS Template
             <li><a href="#preview">Preview</a></li>
             <li><a href="#testimonials">Reviews</a></li>
         </ul>
+        <button class="mobile-menu-login" id="mobile-form-open">Login</button>
         <a href="#download" class="mobile-menu-cta">Download Free</a>
+    </div>
+
+    <!-- Login Form Modal -->
+    <div class="login-overlay" id="loginOverlay"></div>
+    <div class="form_container">
+        <i class="uil uil-times form_close"></i>
+        <!-- Login Form -->
+        <div class="form login_form">
+            <form action="#">
+                <h2>Login to Mochi Space 🍡</h2>
+
+                <div class="input_box">
+                    <input type="email" placeholder="Enter your email" required />
+                    <i class="uil uil-envelope-alt email"></i>
+                </div>
+                <div class="input_box">
+                    <input type="password" placeholder="Enter your password" required />
+                    <i class="uil uil-lock password"></i>
+                    <i class="uil uil-eye-slash pw_hide"></i>
+                </div>
+
+                <div class="option_field">
+                    <span class="checkbox">
+                        <input type="checkbox" id="check" />
+                        <label for="check">Remember me</label>
+                    </span>
+                    <a href="#" class="forgot_pw">Forgot password?</a>
+                </div>
+
+                <button type="submit" class="button">Login Now</button>
+
+                <div class="login_signup">Don't have an account? <a href="#" id="signup">Signup</a></div>
+            </form>
+        </div>
+
+        <!-- Signup Form -->
+        <div class="form signup_form">
+            <form action="#">
+                <h2>Create Your Account 🌸</h2>
+
+                <div class="input_box">
+                    <input type="email" placeholder="Enter your email" required />
+                    <i class="uil uil-envelope-alt email"></i>
+                </div>
+                <div class="input_box">
+                    <input type="password" placeholder="Create password" required />
+                    <i class="uil uil-lock password"></i>
+                    <i class="uil uil-eye-slash pw_hide"></i>
+                </div>
+                <div class="input_box">
+                    <input type="password" placeholder="Confirm password" required />
+                    <i class="uil uil-lock password"></i>
+                    <i class="uil uil-eye-slash pw_hide"></i>
+                </div>
+
+                <button type="submit" class="button">Signup Now</button>
+
+                <div class="login_signup">Already have an account? <a href="#" id="login">Login</a></div>
+            </form>
+        </div>
     </div>
 
     <!-- Hero Section -->
@@ -471,5 +536,6 @@ Free HTML CSS Template
     </footer>
 
     <script src="tooplate-mochi-script.js"></script>
+    <script src="login-script.js"></script>
 </body>
 </html>
